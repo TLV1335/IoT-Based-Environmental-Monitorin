@@ -1,27 +1,27 @@
 # IoT-Based Environmental Monitoring & Early Hazard Warning System
 
 [![Platform](https://img.shields.io/badge/Platform-Arduino%20%7C%20ESP32-blue.svg)](https://www.arduino.cc/)
-[![Radio](https://img.shields.io/badge/Radio-LoRa%20433MHz%20(E32--433T20D)-orange.svg)](https://www.ebyte.com)
+[![Radio](https://img.shields.io/badge/Radio-LoRa%20433MHz%20--%20E32--433T20D-orange.svg)](https://www.ebyte.com/)
 [![Cloud](https://img.shields.io/badge/Cloud-Firebase%20Realtime%20Database-yellow.svg)](https://firebase.google.com/)
 [![Alerts](https://img.shields.io/badge/Notifications-Telegram%20Bot%20API-0088cc.svg)](https://core.telegram.org/bots/api)
-[![Frontend](https://img.shields.io/badge/Frontend-HTML5%20%7C%20CSS3%20%7C%20Chart.js-green.svg)]()
-[![Course](https://img.shields.io/badge/Course-IoT102%20(Semester%204)-purple.svg)]()
+[![Frontend](https://img.shields.io/badge/Frontend-HTML5%20%7C%20CSS3%20%7C%20Chart.js-green.svg)](https://www.chartjs.org/)
+[![Course](https://img.shields.io/badge/Course-IoT102%20--%20Semester%204-purple.svg)](docs/IoT_Project_Report.pdf)
 
 > A robust, long-range, and low-cost environmental telemetry and proactive hazard warning system designed for industrial warehouses, enclosed livestock farms, and smart greenhouses. Featuring **Two-Way LoRa Communication**, **Edge Delta Filtering**, **Non-Volatile Offline Resilient Gateway**, and **Multi-Channel Alerts**.
 
 ---
 
 ## 📌 Table of Contents
-- [Overview & Problem Statement](#-overview--problem-statement)
-- [System Architecture](#-system-architecture)
-- [Key Technical Innovations](#-key-technical-innovations)
-- [Hardware Architecture & Pinout](#-hardware-architecture--pinout)
-- [Communication Protocol Specification](#-communication-protocol-specification)
-- [Repository Structure](#-repository-structure)
-- [Experimental Results](#-experimental-results)
-- [Getting Started & Deployment](#-getting-started--deployment)
-- [Project Artifacts & Media](#-project-artifacts--media)
-- [Authors & Acknowledgments](#-authors--acknowledgments)
+- [Overview & Problem Statement](#overview--problem-statement)
+- [System Architecture](#system-architecture)
+- [Key Technical Innovations](#key-technical-innovations)
+- [Hardware Architecture & Pinout](#hardware-architecture--pinout)
+- [Communication Protocol Specification](#communication-protocol-specification)
+- [Repository Structure](#repository-structure)
+- [Experimental Results](#experimental-results)
+- [Getting Started & Deployment](#getting-started--deployment)
+- [Project Artifacts & Media](#project-artifacts--media)
+- [Authors & Acknowledgments](#authors--acknowledgments)
 
 ---
 
