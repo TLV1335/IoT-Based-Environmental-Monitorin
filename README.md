@@ -1,7 +1,7 @@
 # IoT-Based Environmental Monitoring & Early Hazard Warning System
 
-[![Platform](https://img.shields.io/badge/Platform-Arduino%20%7C%20ESP32-blue.svg)](https://www.arduino.cc/)
-[![Radio](https://img.shields.io/badge/Radio-LoRa%20433MHz%20--%20E32--433T20D-orange.svg)](https://www.ebyte.com/)
+[![Platform](https://img.shields.io/badge/Platform-Arduino%20%7C%20ESP32-blue.svg)](https://docs.arduino.cc/hardware/uno-rev3/)
+[![Radio](https://img.shields.io/badge/Radio-LoRa%20433MHz%20--%20E32--433T20D-orange.svg)](https://www.cdebyte.com/products/E32-433T20D)
 [![Cloud](https://img.shields.io/badge/Cloud-Firebase%20Realtime%20Database-yellow.svg)](https://firebase.google.com/)
 [![Alerts](https://img.shields.io/badge/Notifications-Telegram%20Bot%20API-0088cc.svg)](https://core.telegram.org/bots/api)
 [![Frontend](https://img.shields.io/badge/Frontend-HTML5%20%7C%20CSS3%20%7C%20Chart.js-green.svg)](https://www.chartjs.org/)
