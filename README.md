@@ -21,7 +21,7 @@
 - [Experimental Results](#experimental-results)
 - [Getting Started & Deployment](#getting-started--deployment)
 - [Project Artifacts & Media](#project-artifacts--media)
-- [Authors & Acknowledgments](#authors--acknowledgments)
+- [Team & Personal Contribution](#team--personal-contribution)
 
 ---
 
@@ -264,11 +264,37 @@ Tested in an urban setting featuring heavy reinforced concrete barriers:
 
 ---
 
-## 👥 Authors & Acknowledgments
+## 👥 Team & Personal Contribution
 
-* **Group 3 (SE2040) — FPT University**
-* **Project Academic Supervisor:** Mr. Nguyen Tri Thong
-* **Demonstration Video:** [Watch on YouTube](https://youtu.be/iTY4duVQlrI?si=Rn_Kyp6eaRANaa9H)
+* **Institution:** FPT University — Course: IoT102 (Semester 4, Class SE2040)
+* **Academic Supervisor:** Mr. Nguyen Tri Thong
+* **Project Team:** Group 3
+
+---
+
+### 👨‍💻 Primary Role & Core Technical Ownership: Lương Văn Thắng (Lead Developer & Systems Architect)
+
+As the primary technical lead, I was directly responsible for the end-to-end architecture, mathematical algorithms, and complete firmware implementation across both microcontrollers:
+
+* **Full Firmware Engineering:** 
+  * Authored 100% of the production firmware for both the **Sensor Node (Arduino Uno)** and the **Central Gateway (ESP32 DevKit)** from scratch.
+  * Configured multi-bus hardware peripherals: SoftwareSerial/Hardware UART2, ADC prescalers, parallel 16x2 LCD, 1-Wire DHT bus, and discrete digital alarm GPIOs.
+* **Core Algorithm & Digital Signal Processing:**
+  * Engineered the **Sharp GP2Y1014 signal conditioning pipeline**: Designed a precise 20-sample oversampling routine using microsecond-level IR LED pulsing ($280\,\mu\text{s}$) paired with a dynamic rate-of-change smoothing filter ($30\%$ damping limit) to completely eliminate ADC voltage spikes.
+  * Formulated the **Multi-Tier Delta Filtering Matrix** to replace redundant periodic polling, cutting RF channel congestion and battery drain.
+* **Protocol & Systems Architecture:**
+  * Designed the proprietary **Two-Way LoRa Protocol**: Created the synchronized 3-second *Listen Window* mechanism on the sleeping node, enabling real-time remote threshold reconfigurations (`CMD:DELTA`, `CMD:INTERVAL`, `CMD:LIMIT`) and NTP time sync without physical redeployment.
+  * Designed the **Offline Resilient Failsafe**: Integrated ESP32 non-volatile NVS flash caching (`Preferences`), ensuring autonomous local hazard evaluation (LEDs, LCD, continuous buzzer) continues operating seamlessly during Wi-Fi / Cloud outages.
+  * Implemented edge safety logic, the physical **Buzzer Snooze mechanism**, and an anti-spam rate limiter for the Telegram Bot dispatcher.
+* **Technical Analysis & Documentation:**
+  * Performed all circuit analysis, component selection, field-test RF range validation (up to 500m through concrete barriers), and compiled the LaTeX technical research report.
+
+---
+
+### 📺 Demonstration & Deliverables
+* **YouTube Live Demonstration:** [Watch Video Demo](https://youtu.be/iTY4duVQlrI?si=Rn_Kyp6eaRANaa9H)
+* **Technical Research Paper:** [Download Full Report PDF](docs/IoT_Project_Report.pdf)
+* **Defense Presentation:** [Download Slide Deck PPTX](docs/IoT_Presentation.pptx)
 
 ---
 
