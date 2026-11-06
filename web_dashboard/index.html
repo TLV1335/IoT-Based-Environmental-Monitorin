@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>IoT Environment Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app">
+
+        <!-- SIDEBAR -->
+        <!-- <div class="sidebar">
+            <div class="logo">🌡 IoT Monitor</div>
+
+            <div class="menu">
+                <div class="menu-item active">Dashboard</div>
+                <div class="menu-item">Sensors</div>
+                <div class="menu-item">Alerts</div>
+                <div class="menu-item">Settings</div>
+            </div>
+        </div> -->
+
+        <!-- MAIN -->
+        <div class="main">
+
+            <div class="header">
+                <h1>Environment Dashboard</h1>
+                <p>Realtime monitoring system</p>
+            </div>
+
+            <!-- CARDS -->
+            <div class="card-container">
+
+                <div class="card temp">
+                    <h3>Nhiệt độ</h3>
+                    <p class="value" id="tempValue">28°C</p>
+                </div>
+
+                <div class="card humidity">
+                    <h3>Độ ẩm</h3>
+                    <p class="value" id="humidValue">65%</p>
+                </div>
+
+                <div class="card dust">
+                    <h3>Mức độ bụi</h3>
+                    <p class="value" id="humidValue">65%</p>
+                </div>
+
+            </div>
+
+            <!-- SENSOR LIST -->
+            <div class="section">
+                <h2>Sensor Devices</h2>
+
+            
+            </div>
+            <div class="section">
+                <h2>Environmental Trends</h2>
+
+                <div class="chart-grid">
+
+                    <div class="chart-box small">
+                        <h3>Temperature</h3>
+                        <canvas id="tempChart"></canvas>
+                    </div>
+
+                    <div class="chart-box small">
+                        <h3>Humidity</h3>
+                        <canvas id="humidChart"></canvas>
+                    </div>
+
+                    <div class="chart-box small">
+                        <h3>Dust (PM2.5)</h3>
+                        <canvas id="dustChart"></canvas>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Environmental History Log</h2>
+
+                <div class="history-table-container">
+                    <table class="history-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Temperature</th>
+                                <th>Humidity</th>
+                                <th>Dust</th>
+                                <th>Status</th>
+                                <th>Note</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="historyTableBody">
+
+                            <tr>
+                                <td>06/06/2026</td>
+                                <td>31°C</td>
+                                <td>68%</td>
+                                <td>24</td>
+                                <td class="safe">Safe</td>
+                                <td>Normal condition</td>
+                            </tr>
+
+                            <tr>
+                                <td>05/06/2026</td>
+                                <td>38°C</td>
+                                <td>85%</td>
+                                <td>52</td>
+                                <td class="warning">Warning</td>
+                                <td>High temperature</td>
+                            </tr>
+
+                            <tr>
+                                <td>04/06/2026</td>
+                                <td>42°C</td>
+                                <td>90%</td>
+                                <td>70</td>
+                                <td class="danger">Danger</td>
+                                <td>Unsafe environment</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

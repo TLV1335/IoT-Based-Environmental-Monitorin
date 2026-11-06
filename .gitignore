@@ -1,0 +1,33 @@
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.directory
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.bak
+*.code-workspace
+
+# Build artifacts & compiled binaries
+*.hex
+*.bin
+*.elf
+*.o
+*.a
+*.so
+.pio/
+build/
+
+# Sensitive files / Secrets
+secrets.h
+.env
+*.local
+
+# Office / Temp files
+~$*
+*.tmp
