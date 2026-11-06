@@ -272,22 +272,25 @@ Tested in an urban setting featuring heavy reinforced concrete barriers:
 
 ---
 
-### 👨‍💻 Primary Role & Core Technical Ownership: Lương Văn Thắng (Lead Developer & Systems Architect)
+### 👨‍💻 Primary Role & Core Technical Ownership: Lương Văn Thắng (Technical Lead & Firmware Architect)
 
-As the primary technical lead, I was directly responsible for the end-to-end architecture, mathematical algorithms, and complete firmware implementation across both microcontrollers:
+As the core developer and technical lead, I took full ownership of the system architecture, mathematical algorithms, and embedded firmware implementation:
 
-* **Full Firmware Engineering:** 
-  * Authored 100% of the production firmware for both the **Sensor Node (Arduino Uno)** and the **Central Gateway (ESP32 DevKit)** from scratch.
-  * Configured multi-bus hardware peripherals: SoftwareSerial/Hardware UART2, ADC prescalers, parallel 16x2 LCD, 1-Wire DHT bus, and discrete digital alarm GPIOs.
-* **Core Algorithm & Digital Signal Processing:**
-  * Engineered the **Sharp GP2Y1014 signal conditioning pipeline**: Designed a precise 20-sample oversampling routine using microsecond-level IR LED pulsing ($280\,\mu\text{s}$) paired with a dynamic rate-of-change smoothing filter ($30\%$ damping limit) to completely eliminate ADC voltage spikes.
-  * Formulated the **Multi-Tier Delta Filtering Matrix** to replace redundant periodic polling, cutting RF channel congestion and battery drain.
-* **Protocol & Systems Architecture:**
-  * Designed the proprietary **Two-Way LoRa Protocol**: Created the synchronized 3-second *Listen Window* mechanism on the sleeping node, enabling real-time remote threshold reconfigurations (`CMD:DELTA`, `CMD:INTERVAL`, `CMD:LIMIT`) and NTP time sync without physical redeployment.
-  * Designed the **Offline Resilient Failsafe**: Integrated ESP32 non-volatile NVS flash caching (`Preferences`), ensuring autonomous local hazard evaluation (LEDs, LCD, continuous buzzer) continues operating seamlessly during Wi-Fi / Cloud outages.
-  * Implemented edge safety logic, the physical **Buzzer Snooze mechanism**, and an anti-spam rate limiter for the Telegram Bot dispatcher.
-* **Technical Analysis & Documentation:**
-  * Performed all circuit analysis, component selection, field-test RF range validation (up to 500m through concrete barriers), and compiled the LaTeX technical research report.
+* **Full-Stack Embedded Firmware Engineering:**
+  * **Objective:** Build robust, autonomous firmware running 24/7 on both edge nodes.
+  * **Technologies & Methods:** C/C++, Arduino Uno, ESP32, Hardware UART2 / SoftwareSerial, ADC prescalers, parallel LCD driver, and multi-bus peripheral interfacing.
+
+* **Sensor Signal Conditioning & Power Optimization:**
+  * **Objective:** Eliminate high-frequency optical sensor noise, prevent false alarms, and drastically extend battery lifespan.
+  * **Technologies & Methods:** Multi-sample oversampling, digital rate-of-change smoothing, dynamic Delta Filtering matrix, and AVR deep sleep power management (`LowPower`).
+
+* **Two-Way Wireless Communication Protocol:**
+  * **Objective:** Achieve reliable long-range telemetry through industrial obstacles with remote over-the-air parameter reconfiguration.
+  * **Technologies & Methods:** 433 MHz LoRa RF (`E32-433T20D`), custom bi-directional packet handshake, synchronized post-transmission *Listen Window*, and NTP time alignment.
+
+* **Edge Computing, Failsafe Architecture & Cloud Integration:**
+  * **Objective:** Ensure standalone local operation during network blackouts while delivering real-time remote hazard telemetry.
+  * **Technologies & Methods:** Non-volatile flash storage (`Preferences` NVS), multi-tier hazard evaluation state machine, Telegram Bot API (anti-spam rate-limiting), and Firebase Realtime Database.
 
 ---
 
